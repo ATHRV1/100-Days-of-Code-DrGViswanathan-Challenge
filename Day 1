@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int n, m, a;
+    cout<< "Please enter the values of lenght, width of the square and length of flagstone seperated by single space"<< endl;
+    cin>> n>>m>>a;
+    int length_flagstones = ceil((n+a)/a);
+    int width_flagstones = ceil((m+a)/(a));
+
+    int total_flagstones = (length_flagstones)*(width_flagstones);
+    cout << "The total number of flagstones required: "<< total_flagstones<< endl;
+
+    
+    return 0;
+}
+
