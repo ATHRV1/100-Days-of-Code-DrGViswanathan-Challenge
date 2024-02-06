@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int n, count = 0;
+    cout << "Enter the Number of Statements\n";
+    cin >> n;
+    string arr[n];
+    string s1 = "++";
+    cout<<"Enter the commands one by one\n";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    for (int i = 0; i < n; i++)
+    {
+        
+        if (arr[i] == "x++" or arr[i] == "++x")
+        {
+            count++;
+        }
+        else
+        {
+            count--; 
+        }
+    }
+    cout << "Final Value: " << count;
+
+    return 0;
+}
