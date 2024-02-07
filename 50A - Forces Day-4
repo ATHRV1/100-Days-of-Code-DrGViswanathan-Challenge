@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+
+
+int main(int argc, char const *argv[])
+{
+    int count, count2;
+    int m;
+    int n;
+    cout << "the size of the Rectangle in 2 space seperated digits" << endl;
+    cin >> m >> n;
+    int a = 2;
+    int b = 1;
+    int c = m * n;
+
+    cout << "The Number of dominoes Required are: " << c/a;
+   
+    
+
+    return 0;
+}
+
