@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+   string s;
+   getline(cin, s);
+   char arr[s.size()];
+
+   for (int i = 0; i < s.size(); i++)
+   {
+      arr[i] = tolower(s[i]);
+   }
+   for (int i = 0; i < s.size(); i++)
+   {
+      if (arr[i] == 'a' or arr[i] == 'e' or arr[i] == 'i' or arr[i] == 'o' or arr[i] == 'u')
+      {
+         continue;
+      }
+      cout << "." << arr[i];
+   }
+   return 0;
+}
