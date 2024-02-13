@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int n,m;
+    int count =0;
+
+    cin>>n>>m;
+    while (n<=m)
+    {
+        n = n*3;
+        m = m*2;
+        count ++;
+    }
+    cout << count;
+    
+    return 0;
+}
