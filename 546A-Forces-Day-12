@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int k,n,w;
+     
+    cin>>k>>n>>w;
+    int cost =0;
+
+    for (int i = 1; i <= w; i++)
+    {
+        int c= 3*i;
+        cost = cost +c;
+    }
+    cout << cost-n;
+    
+    return 0;
+}
