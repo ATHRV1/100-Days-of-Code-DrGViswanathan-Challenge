@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int n,k,l,c,d,p,nl,np;
+    cin>>n>>k>>l>>c>>d>>p>>nl>>np;
+
+    int drink = k*l/n; 20
+    int slice= c*d;    15
+    int salt = p/np;   10
+
+    if (drink<slice && drink <salt)
+    {
+        cout << drink/n;
+    }
+    else if (slice<salt)
+    {
+       cout<<slice/n;
+    }
+    else{
+        cout<<salt/n;
+    }
+    
+    
+
+    return 0;
+}
