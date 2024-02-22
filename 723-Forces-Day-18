@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath> // Include cmath for the abs function
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int a, b, c, best;
+    cin >> a >> b >> c;
+
+    if ((a < b && a > c )  || (a>b && a<c))
+    {
+        best = a;
+        cout << (abs(best - b) + abs(best - c));
+    }
+    else if ((b < c && b>a) || (b>c && b<a)) // Remove the extra '>' in this line
+    {
+        best = b;
+        cout << (abs(best - a) + abs(best - c));
+    }
+    else
+    {
+        
+        best = c;
+        cout << (abs(best - a) + abs(best - b));
+    }
+
+    return 0;
+}
