@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int n;
+    int p =0;
+    int passenger=0;
+    cin>>n;
+    
+    for (int i = 0; i < n; i++)
+    {
+
+        for (int j = 0; j < 2; j++)
+        {
+            int a;
+            cin>>a;
+            if (j==0)
+            {
+                p = p-a;
+            }else{
+                p = p+a;
+            }
+        }
+        if (p>passenger)
+        {
+            passenger = p;
+        }
+        
+        
+
+        
+    }
+    cout<<passenger;
+    
+    
+    return 0;
+}
