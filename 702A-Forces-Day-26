@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+ 
+int main(int argc, char const *argv[]) {
+    int n;
+    cin >> n;
+    int *arr = new int[n]; 
+    int count = 0;
+    int aa = 0;
+    int b = 0; 
+ 
+    for (int i = 0; i < n; i++) {
+        int a;
+        cin >> a;
+        arr[i] = a;
+    }
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > arr[aa]) {
+            count++;
+        } else {
+            if (count > b) {
+                b = count;
+            }
+            count = 0;
+        }
+        aa = i;
+    }
+ 
+    if (count > b) {
+        b = count;
+    }
+ 
+    if (b == 0 && count == 0) {
+        cout << "1";
+    } else {
+        cout << b + 1 << endl;
+    }
+ 
+    delete[] arr;
+    return 0;
+}
