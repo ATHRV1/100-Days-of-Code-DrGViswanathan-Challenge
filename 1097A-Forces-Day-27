@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    string s;
+    cin>>s;
+    int count =0;
+
+    for (int i = 0; i < 5; i++)
+    {
+        string str;
+        cin>>str;
+        bool isFound = str.find(s[0]) != string::npos;
+        bool isFound1 = str.find(s[1]) != string::npos;
+        if (isFound || isFound1)
+        {
+            count++;
+        }
+        
+    }
+    if (count>0)
+    {
+        cout<<"YES"<<endl;
+    }
+    else{
+        cout<<"NO"<<endl;
+    }
+    
+    
+    
+    return 0;
+}
