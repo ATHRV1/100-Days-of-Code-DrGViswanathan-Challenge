@@ -1,0 +1,62 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int test;
+    int num;
+    cin >> test;
+    while (test--)
+    {
+        
+        cin >> num;
+        int a = num / 2;
+        if (a % 2 == 0)
+        {
+            if (num == 2)
+            {
+                cout << "NO" << endl;
+            }
+            else
+            {
+                cout << "YES" << endl;
+                int c = 1;
+
+                vector<int> arr(a);
+                vector<int> arr1(a);
+
+                for (int i = 0; i < a / 2; i++)
+                {
+
+                    arr[i] = c;
+                    arr1[i] = c + 1;
+                    c = c + 2;
+                }
+                int c2 = c + 1;
+                for (int i = a / 2; i < a; i++)
+                {
+
+                    arr[i] = c2 + 1;
+                    arr1[i] = c2;
+                    c2 = c2 + 2;
+                }
+                
+                for (int i = 0; i < a; i++)
+                {
+                    cout << arr1[i] << " ";
+                }
+                for (int i = 0; i < a; i++)
+                {
+                    cout << arr[i] << " ";
+                }
+                cout<<endl;
+            }
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+    return 0;
+}
