@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <map>
+
+using namespace std;
+
+typedef int long long ll;
+#define p(a) cout << a << "\n";
+#define p2(a,b) cout << a << " " << b << "\n";
+#define YES cout << "YES" << "\n"
+#define NO cout << "NO" << "\n"
+
+int factorial(int n){
+    if(n==1){
+        return 1;
+    }else{
+        return n*factorial(n-1);
+    }
+}
+int main(int argc, char const *argv[])
+{
+    int a=1,ans;
+    string str;
+    cin>>str;
+    
+    map <char,int> mpp;
+    for (int i = 0; i < str.size(); i++)
+    {
+        mpp[str[i]]++;
+    }
+    for(auto it: mpp){
+        if (it.second>0)
+        {
+            a*=(factorial(it.second));
+        }
+        
+    }
+    ans = factorial(str.size())/a;
+    cout<<ans<<endl;
+        
+
+    return 0;
+}
