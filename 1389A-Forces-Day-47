@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+
+        int r, l;
+        cin >> r >> l;
+        if (r % l == 0)
+        {
+            cout << r << " " << l << endl;
+        }
+        else
+        {
+            if (2 * r <= l)
+            {
+                cout << r << " " << 2 * r << endl;
+            }
+            else
+            {
+                cout << "-1"
+                     << " "
+                     << "-1" << endl;
+            }
+        }
+    }
+
+    return 0;
+}
