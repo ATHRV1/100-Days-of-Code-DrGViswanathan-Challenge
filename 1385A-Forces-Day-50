@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int x, y, z;
+        cin >> x >> y >> z;
+
+        if ((x == y && z < x))
+        {
+            cout << "YES" << endl;
+            cout << x << " " << z << " " << z << endl;
+        }
+        else if ((y == z && x < y))
+        {
+            cout << "YES" << endl;
+            cout << x << " " << x << " " << y  << endl;
+        }
+        else if ((x == z && y < x))
+        {
+            cout << "YES" << endl;
+            cout << y << " " << x  << " " << y << endl;
+        }
+        else if (x==y && y==z && x==z)
+        {
+            cout << "YES" << endl;
+            cout << x << " " << x << " " << x << endl;
+        }
+        
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}
