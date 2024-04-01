@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int t;
+    cin >> t;
+
+    while (t--)
+    {
+        int a=0,b=0;
+        int n, m;
+        cin >> n >> m;
+        
+        if (n==m)
+        {
+            a=n;
+            b=n;
+        }
+        else if (n>m)
+        {
+            a=m;
+            b=n;
+        }else{
+            a=n;
+            b=m;
+        }
+        
+
+        if (2 * a > b)
+        {
+            int c = 2 * a;
+            cout << c * c << endl;
+        }
+        else
+        {
+            cout << b * b << endl;
+        }
+    }
+
+    return 0;
+}
