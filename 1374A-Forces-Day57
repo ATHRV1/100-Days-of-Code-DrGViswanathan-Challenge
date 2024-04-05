@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+
+        int x, y, n;
+        cin >> x >> y >> n;
+        int ans = 0;
+
+        int output = n % x;
+
+        if (output > y)
+        {
+            int a = output - y;
+            ans = n - a;
+            cout << ans << endl;
+        }
+        else if (output == y)
+        {
+            cout << n << endl;
+        }
+        else if (output < y)
+        {
+            int a = x - y;
+            int b = output + a;
+            ans = n - b;
+            cout << ans << endl;
+        }
+    }
+
+    return 0;
+}
