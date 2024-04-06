@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int rate,change;
+    cin>>rate>>change;
+    int i=1;
+
+    while (i>0)
+    {
+        int a = (rate*i)%10;
+        if (a==change || a==0)
+        {
+            cout<<i<<endl;
+            break;
+        }
+        i++;
+        
+    }
+    
+
+
+    return 0;
+}
