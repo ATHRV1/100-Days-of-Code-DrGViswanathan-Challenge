@@ -1,0 +1,40 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    long long a,b,c;
+    cin>>a>>b>>c;
+
+    long long first=a/c;
+    long long change1=a%c;
+
+    long long second = b/c;
+    long long change2 = b%c;
+
+    long long third = (change1+change2)/c;
+
+    long long ans = first+second+third;
+    cout<<ans<<" ";
+
+    if (change1==0 || change2==0 || third==0)
+    {
+        cout<<"0"<<endl;
+        return 0;
+    }
+    
+    long long ans1= c-change1;
+    long long ans2 = c-change2;
+    if (ans1>=ans2)
+    {
+        cout<<ans2<<endl;
+    }else{
+        cout<<ans1<<endl;
+    }
+    
+    
+    return 0;
+}
