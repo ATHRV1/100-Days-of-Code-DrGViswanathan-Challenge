@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    long long t;
+    cin >> t;
+    while (t--)
+    {
+
+        long long n, m;
+        cin >> n >> m;
+
+        long long a = (n - 1) * 9;
+        long long b = m+a;
+        cout << b << endl;
+    }
+
+    return 0;
+}
