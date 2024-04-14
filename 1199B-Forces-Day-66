@@ -1,0 +1,13 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    long long h,l;
+    cin>>h>>l;
+
+    long long a = abs((l*l) -(h*h));
+    cout<<fixed<<setprecision(13)<<a/(2.0*h)<<endl;
+    return 0;
+}
