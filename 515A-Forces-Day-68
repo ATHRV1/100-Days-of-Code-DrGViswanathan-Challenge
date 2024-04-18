@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int a,b,c;
+    cin>>a>>b>>c;
+    a = abs(a);
+    b = abs(b);
+    c = abs(c);
+    int a1=c-(a+b);
+
+    if (a==0 && b==0 && c%2==0)
+    {
+        cout<<"YES"<<endl;
+    }
+    else if (a+b == c)
+    {
+        cout<<"YES"<<endl;
+    }
+    else if (a+b < c && a1%2==0)
+    {
+        cout<<"YES"<<endl;
+    }
+    
+    else{
+        cout<<"NO"<<endl;
+    }
+    
+    
+    return 0;
+}
