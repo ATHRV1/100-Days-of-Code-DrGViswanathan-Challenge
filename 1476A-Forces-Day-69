@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long long a, b;
+        cin >> a >> b;
+        long long ans, ans1;
+
+        if (b >= a)
+        {
+            if (b % a != 0)
+            {
+                ans = (b / a) + 1;
+            }
+            else
+            {
+                ans = b / a;
+            }
+
+            cout << ans << endl;
+        }
+        else if (b == 1)
+        {
+            cout << "1" << endl;
+        }
+        else if (b < a)
+        {
+            if (a % b == 0)
+            {
+                ans1 = a;
+            }
+            else
+            {
+                int c = b - (a % b);
+                ans1 = a + c;
+            }
+
+            if (ans1 % a != 0)
+            {
+                ans = (ans1 / a) + 1;
+            }
+            else
+            {
+                ans = ans1 / a;
+            }
+
+            cout << ans << endl;
+        }
+    }
+
+    return 0;
+}
