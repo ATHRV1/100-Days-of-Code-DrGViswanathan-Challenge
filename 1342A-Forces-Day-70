@@ -1,0 +1,50 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+
+        long long num1, num2, a, b, count1 = 0, count2 = 0, sum = 0;
+        cin >> num1 >> num2 >> a >> b;
+
+        if (num1==0 && num2==0)
+        {
+            cout<<"0"<<endl;
+            continue;
+        }
+        else if (b<=a && a==b)
+        {
+            long long c= max(num1,num2);
+            sum = c*b;
+            cout<<sum<<endl;
+            continue;
+        }
+        else if (2*a<=b)
+        {
+            
+            sum = (num1+num2)*a;
+            cout<<sum<<endl;
+            continue;
+        }
+        else{
+            long long c= max(num1,num2);
+            long long d=min(num1,num2);
+            long long e = c-d;
+            sum = e*a + d*b;
+            cout<<sum<<endl;
+            continue;
+        }
+        
+        
+       
+        
+        
+    }
+
+    return 0;
+}
