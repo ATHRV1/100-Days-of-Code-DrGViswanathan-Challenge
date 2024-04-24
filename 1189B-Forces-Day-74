@@ -1,0 +1,45 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    long long n;
+    cin >> n;
+    vector<long long> arr(n);
+    bool flag = false;
+    for (long long i = 0; i < n; i++)
+    {
+        long long a;
+        cin >> a;
+        arr[i] = a;
+    }
+    sort(arr.begin(), arr.end());
+    
+    if ((arr[n - 3] + arr[n - 2]) > arr[n - 1])
+    {
+        flag = true;
+    }
+    if (flag == true)
+    {
+        cout << "YES" << endl;
+
+            for (long long i = n - 1; i >= 0; i--)
+            {
+                if (i == n -2)
+                {
+                    continue;
+                }
+                cout << arr[i] << " ";
+            }
+            cout << arr[n -2];
+        }
+    
+    else
+    {
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
