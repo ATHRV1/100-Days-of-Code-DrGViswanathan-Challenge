@@ -1,0 +1,63 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main()
+{
+
+    long long t;
+    cin >> t;
+    while (t--)
+    {
+        ios::sync_with_stdio(0);
+        cin.tie(0);
+
+        long long nom, ic, ct, co;
+        cin >> nom >> ic >> ct >> co;
+
+        vector<long long> arr(nom);
+        for (int i = 0; i < nom; i++)
+        {
+            cin >> arr[i];
+        }
+
+        if (arr[0] >= ic)
+        {
+            cout << "NO" << endl;
+        }
+        else
+        {
+            if (arr[0] * ct > co)
+            {
+                ic-= co;
+            }
+            else
+            {
+                ic-= arr[0] * ct;
+            }
+
+            for (long long i = 1; i < nom; i++)
+            {
+                long long a = arr[i] - arr[i - 1];
+
+                if (a * ct > co)
+                {
+                    ic-= co;
+                }
+                else
+                    ic-= a* ct;
+            }
+            if (ic>=0)
+            {
+                cout << "YES" << endl;
+            }
+            else
+            {
+                cout << "NO" << endl;
+            }
+        }
+    }
+
+    return 0;
+}
