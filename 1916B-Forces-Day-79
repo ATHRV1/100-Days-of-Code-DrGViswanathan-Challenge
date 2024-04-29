@@ -1,0 +1,45 @@
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <numeric>
+using namespace std;
+
+int gcd(int a, int b) {
+  if (a == 0) {
+    return b;
+  } else if (b == 0) {
+    return a;
+  }
+
+ 
+  while (b != 0) {
+    int temp = a % b;
+    a = b;
+    b = temp;
+  }
+
+  return a;
+}
+
+
+int main(int argc, char const *argv[])
+{
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    long long t;
+    cin>>t;
+    while (t--)
+    {
+    
+    long long a, b;
+    cin >> a >> b;
+    if(b%a==0){
+            cout<<b*(b/a)<<endl;
+        }else{
+            int c = a/gcd(a,b);
+            cout<<b*c<<endl;
+        }
+    }
+
+    return 0;
+}
