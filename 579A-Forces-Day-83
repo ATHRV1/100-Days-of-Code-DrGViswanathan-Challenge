@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    long long x,y=0;
+    
+    cin>>x;
+    if (x%2==1)
+    {
+        y++;
+    }
+    
+    
+    while (x>1)
+    {
+        
+        x/=2;
+        if (x%2==1 || x==1)
+        {
+            y++;
+        }
+        
+        
+    }
+    cout<<y<<endl;
+    
+    
+      
+    
+    return 0;
+}
