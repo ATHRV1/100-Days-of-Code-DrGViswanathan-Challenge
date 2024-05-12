@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int t;
+    cin>>t;
+    for (int i = 0; i < t; i++)
+    {
+    
+    int n,count=0;
+    cin>>n;
+    string str1, str2,str3;
+    cin>>str1>>str2>>str3;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (str3[i]==str1[i]||str3[i]==str2[i])
+        {
+            count++;
+        }else{
+            cout<<"YES"<<endl;
+            break;;
+        }
+        
+    }
+    if (count==n)
+    {
+        cout<<"NO"<<endl;
+    }
+    
+
+    }
+    return 0;
+    
+}
