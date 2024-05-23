@@ -1,0 +1,41 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+typedef long long ull;
+
+int main(int argc, char const *argv[])
+{
+    ull t;
+    cin >> t;
+    while (t--)
+    {
+        ull n, product = 0;
+        cin >> n;
+        vector<ull> arr(n);
+        bool zero=false;
+        for (ull i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+            if (arr[i]==0)
+            {
+              zero=true;
+            }if (arr[i]<0)
+            {
+                product++;
+            }
+            
+            
+        }
+        if (zero==false&&product%2==0)
+        {
+            cout << 1 << endl;
+            cout << 1 << " " << 0 << endl;
+        }
+        else
+        {
+            cout<< 0 <<endl;
+        }
+    }
+
+    return 0;
+}
