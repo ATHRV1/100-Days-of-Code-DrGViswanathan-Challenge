@@ -1,0 +1,26 @@
+// Number of Unique XOR Triplets-1
+
+class Solution {
+public:
+    int uniqueXorTriplets(vector<int>& nums) {
+        stt.clear();
+        vector<pair<int,int>> arr(30,{0,0});
+        for(int i:nums){
+            for(int j=0;j<30;++j){
+                if(i&(1<<j)){
+                    arr[j].second++;
+                }
+                else arr[j].first++;
+            }
+        }
+        int ans=1;
+        for(int i=0;i<30;++i){
+            int t=0;
+            if(arr[i].first>=2 && arr[i].second>=1 || arr[i].second>=3) t++;
+            if(arr[i].first >=1 && arr[i].second>=2 || arr[i].first>=3) t++;
+            ans*=t;
+        }
+        if(ans<nums.size()) ans+=nums.size();
+        return ans;
+    }
+};
