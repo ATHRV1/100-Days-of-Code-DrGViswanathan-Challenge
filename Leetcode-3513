@@ -3,7 +3,6 @@
 class Solution {
 public:
     int uniqueXorTriplets(vector<int>& nums) {
-        stt.clear();
         vector<pair<int,int>> arr(30,{0,0});
         for(int i:nums){
             for(int j=0;j<30;++j){
