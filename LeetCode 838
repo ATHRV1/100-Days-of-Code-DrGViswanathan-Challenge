@@ -1,0 +1,35 @@
+Question: https://leetcode.com/problems/push-dominoes/?envType=daily-question&envId=2025-05-01
+
+
+Solution:
+class Solution {
+public:
+    string pushDominoes(string d) {
+        vector<int> non;
+        for(int i=0;i<d.size();++i){
+            if(d[i]!='.') non.push_back(i);
+        }
+        if(non.empty()) return d;
+        if(d[non[0]]=='L'){
+            for(int i=0;i<non[0];++i){
+                d[i]='L';
+            }
+        }
+        if(d[non.back()]=='R'){
+            for(int i=non.back()+1;i<d.size();++i) d[i]='R';
+        }
+        for(int i=0;i<non.size()-1;++i){
+            if(d[non[i]]==d[non[i+1]]){
+                for(int j=non[i]+1;j<non[i+1];++j){
+                    d[j]=d[non[i]];
+                }
+            }
+            else if(d[non[i]]=='R'){
+                int dist=non[i+1]-non[i]-1;
+                for(int j=non[i]+1;j<=non[i]+(dist/2);++j) d[j]='R';
+                for(int j=non[i+1]-1;j>=non[i+1]-(dist/2);--j) d[j]='L';
+            }
+        }
+        return d;
+    }
+};
